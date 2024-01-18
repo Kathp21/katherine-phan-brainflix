@@ -1,0 +1,44 @@
+@use '../../Styles/partials/variables' as *;
+
+input[type=text] {
+    width: 80vw;
+    box-sizing: border-box;
+    border: 1px solid $form-outline;
+    font-size: 16px;
+    background-color: $form-background;
+    background-image: url('../../assets/images/icons/search.svg');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    border-radius: 4px;
+}
+
+::placeholder {
+    color: $primary-txt;
+}
+
+.header {
+
+    &__logo {
+    display: flex;
+    justify-content: center;
+    }
+
+    &__search-bar {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &__avatar {
+        width: 2.25rem;
+        height: 2.25rem;
+        border-radius: 50%;
+        margin: 1.5rem 0 0 1rem;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        padding: 0 1rem;
+    }
+}
