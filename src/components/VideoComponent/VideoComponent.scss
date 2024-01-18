@@ -1,34 +1,29 @@
 @use '../../Styles/partials/variables' as *;
+@use '../../Styles/partials/mixins' as *;
 
 .video {
     &__source {
         width: 100vw;
-        height: 20vh;
-        // position: relative;
-
+        padding-top: $mobi-padding;
     }
 
-    &__thumbnail {
-        position: relative;
-        display: inline-block;
+    &__title-container {
+        padding: 0 1rem;
     }
-    
-    &__image {
-        width: 100vw;
-        display: block;
-        position: absolute;
-        top: 0;
-        background-blend-mode: overlay;
-        left: 0%;
-        opacity: 0.8;
+
+    &__title {
+        padding: 1.5rem 0 1rem 0;
+        @include text-demi($page-header-mob);
+        color: $primary-txt;
+        margin: 0;
     }
 
     &__details-container {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 3rem 1rem 1rem;
-    border-bottom: $line-diviver;
-    border-top: $line-diviver;
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 3rem 1rem 0;
+        border-bottom: $line-diviver;
+        border-top: $line-diviver;
     }
 
     &__details {
@@ -38,6 +33,11 @@
 
     &__info {
         padding: 0.5rem;
+    }
+
+    &__description {
+        @include text-regular($body-txt-mob);
+        line-height: $line-h-body-mob;
     }
 }   
 

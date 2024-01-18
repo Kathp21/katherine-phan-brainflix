@@ -5,8 +5,6 @@ $primary-active-form:#0095ff;
 $background: #ffffff;
 $CTA-txt: #ffffff;
 
-
-
 //Secondary colors
 $secondary-txt: #afafaf;
 $video-component: #000000;
@@ -19,6 +17,7 @@ $form-background: #fafafa;
 $btn-height: 2.5rem;
 $border-radius: 4px;
 $line-diviver: 1px solid $divider-line;
+$mobi-padding: 1rem;
 
 
 //mobile text styles
@@ -33,4 +32,16 @@ $page-header: 2.063rem;
 $section-header: 0.75rem;
 $subheader: 0.875rem;
 $body-txt: 0.875rem;
-$btn-label: 0.75rem 
+$btn-label: 0.75rem;
+
+//line height mobible
+$line-h-body-mob: 1.125rem; 
+$line-h-subheader-mob: 1.125rem;
+$line-h-secheader-mob: 1.25rem;
+$line-h-btn-mob: 1.25rem;
+
+//line height desktop & tablet 
+$line-height-body: 1.125rem;
+$line-h-subheader: 1.125rem;
+$line-h-secheader: 1.25rem;
+$line-h-btn: 1.25rem;

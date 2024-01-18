@@ -6,12 +6,9 @@ import likeLogo from '../../assets/images/icons/likes.svg';
 const VideoComponent = ({ video }) => {
   return (
     <div className="video">
-      <div className="video__thumbnail">
-        <video src={video.video} controls className="video__source"></video>
-          <img src={video.image} alt="thumbnail" className="video__image" />
-        </div>
-        <section>
-          <h2>{video.title}</h2>
+        <video src={video.video} controls className="video__source" poster={video.image}></video>
+        <section className="video__title-container">
+          <h1 className="video__title">{video.title}</h1>
           <div className="video__details-container">
               <div className="video__details">
                 <span className="video__info">{video.channel}</span>
@@ -26,9 +23,8 @@ const VideoComponent = ({ video }) => {
                 </span>
               </div>
           </div>
+          <p className="video__description">{video.description}</p>
         </section>
-        <p>{video.description}</p>
-
     </div>
   );
 };
