@@ -1,0 +1,43 @@
+@use '../../Styles/partials/variables' as *;
+
+.video {
+    &__source {
+        width: 100vw;
+        height: 20vh;
+        // position: relative;
+
+    }
+
+    &__thumbnail {
+        position: relative;
+        display: inline-block;
+    }
+    
+    &__image {
+        width: 100vw;
+        display: block;
+        position: absolute;
+        top: 0;
+        background-blend-mode: overlay;
+        left: 0%;
+        opacity: 0.8;
+    }
+
+    &__details-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 3rem 1rem 1rem;
+    border-bottom: $line-diviver;
+    border-top: $line-diviver;
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__info {
+        padding: 0.5rem;
+    }
+}   
+
