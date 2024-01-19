@@ -8,10 +8,10 @@
         @include text-demi($subheader-mob);
     }
 
-    &__avarta {
-        width: $avarta-mob;
-        height: $avarta-mob;
-        border-radius: $avarta-border-radius;
+    &__avatar {
+        width: $avatar-mob;
+        height: $avatar-mob;
+        border-radius: $avatar-border-radius;
         margin: 1.5rem 1rem 0 0;
     }
 

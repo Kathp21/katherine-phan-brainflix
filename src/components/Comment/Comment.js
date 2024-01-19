@@ -1,4 +1,4 @@
-import avarta from '../../assets/images/Mohan-muruge.jpg';
+import avatar from '../../assets/images/Mohan-muruge.jpg';
 import './Comment.scss';
 
 
@@ -8,7 +8,7 @@ function Comment () {
             <p className="comment__count"> 3 Comments</p>
             <div>
                 <div className="comment__container">
-                    <img src={avarta} alt="avarta" className="comment__avarta"/>
+                    <img src={avatar} alt="avatar" className="comment__avatar"/>
                     <div>
                         <form className="comment__input">
                             <div className="comment__input-container">
