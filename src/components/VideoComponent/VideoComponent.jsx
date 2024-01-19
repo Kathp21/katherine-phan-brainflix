@@ -2,6 +2,7 @@ import React from 'react';
 import './VideoComponent.scss';
 import viewLogo from '../../assets/images/icons/views.svg';
 import likeLogo from '../../assets/images/icons/likes.svg';
+import formatTimestamp from '../Utilities/FormatTimestamp';
 
 const VideoComponent = ({ video }) => {
   return (
@@ -31,19 +32,3 @@ const VideoComponent = ({ video }) => {
 
 export default VideoComponent;
 
-function formatTimestamp(timestamp) {
-  let date = new Date(timestamp)
-  let day = date.getDate()
-  let month = date.getMonth() +1
-  const year = date.getFullYear()
-        
-    if (day < 10) {
-      day = '0' + day
-    } 
-
-    if (month < 10) {
-        month = '0' + month
-    }
-    return `${month}/${day}/${year}`
-
-}

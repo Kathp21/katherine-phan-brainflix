@@ -3,9 +3,14 @@
 
 .comment-input {
     padding: 0 1rem;
+   
 
     &__count{
         @include text-demi($subheader-mob);
+    }
+
+    &__underline {
+        border-bottom: $line-divider;
     }
 
     &__avatar {
@@ -18,7 +23,7 @@
     &__container {
         display: flex;
         justify-content: center;
-        padding-top: 1rem;
+        padding: 1rem 0;
     }
 
     &__input-container {

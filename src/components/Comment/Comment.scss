@@ -1,0 +1,44 @@
+@use '../../Styles/partials/variables' as *;
+@use '../../Styles/partials/mixins' as *;
+
+.comment {
+    padding: 0 1rem;
+
+    &__container {
+        display: flex;
+        margin-top: 1rem;
+        border-bottom: $line-divider;
+    }
+
+    &__avatar {
+        width: $avatar-mob;
+        height: $avatar-mob;
+        border-radius: $avatar-border-radius;
+        background-color: $avatar-placeholder;
+        border: $line-divider;
+        flex-shrink: 0;
+        flex-grow: 0;
+        flex-basis: auto;
+        margin-top: 1rem;
+        margin-right: 1rem;
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__username {
+        @include text-demi($body-txt-mob);
+    }
+
+    &__date {
+        @include text-regular($body-txt-mob);
+        color: $secondary-txt;
+    }
+
+    &__content {
+        @include text-regular($body-txt-mob);
+        line-height: $line-h-body-mob;
+    }
+}
