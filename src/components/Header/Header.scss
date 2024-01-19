@@ -1,16 +1,15 @@
 @use '../../Styles/partials/variables' as *;
+@use '../../Styles/partials/mixins' as *;
 
-input[type=text] {
+#search {
     width: 80vw;
-    box-sizing: border-box;
-    border: 1px solid $form-outline;
-    font-size: 16px;
-    background-color: $form-background;
     background-image: url('../../assets/images/icons/search.svg');
     background-position: 10px 10px; 
-    background-repeat: no-repeat;
     padding: 12px 20px 12px 40px;
-    border-radius: 4px;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    font-size: 16px;
+    @include form-style;
 }
 
 ::placeholder {

@@ -1,3 +1,4 @@
+@use '../partials/variables' as *;
 
 @mixin text-regular($font-size) {
     font-size: $font-size;
@@ -12,4 +13,21 @@
   @mixin text-bold($font-size) {
     font-size: $font-size;
     font-weight: 700;
+  }
+
+  @mixin form-style {
+    box-sizing: border-box;
+    border: 1px solid $form-outline;
+    background-color: $form-background; 
+    border-radius: $border-radius;
+  }
+
+  @mixin button-style {
+    height: $btn-height;
+    background-color: $primary-active-form;
+    border-radius: $border-radius;
+    border: none;
+    color: $CTA-txt;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
   }

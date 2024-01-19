@@ -1,0 +1,52 @@
+@use '../../Styles/partials/variables' as *;
+@use '../../Styles/partials/mixins' as *;
+
+.comment {
+    padding: 0 1rem;
+
+    &__count{
+        @include text-demi($subheader-mob);
+    }
+
+    &__avarta {
+        width: $avarta-mob;
+        height: $avarta-mob;
+        border-radius: $avarta-border-radius;
+        margin: 1.5rem 1rem 0 0;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        padding-top: 1rem;
+    }
+
+    &__input-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__subheader {
+        color: $secondary-txt;
+        @include text-demi($subheader-mob);
+        margin-bottom: 0.5rem;
+    }
+
+    &__button-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__button {
+       width: 74vw;
+       margin-top: 0;
+       @include button-style;
+       background-image: url('../../assets/images/icons/add_comment.svg');
+    }
+}
+
+#addComment {
+    padding: 1rem 1rem 4rem 1rem;
+    margin-bottom: 1.2rem;
+    @include form-style;
+}
