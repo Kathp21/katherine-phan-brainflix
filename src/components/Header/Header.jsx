@@ -12,7 +12,7 @@ function Header() {
             <div className="header__container">
                 <form className="header__search-bar">
                     <div>
-                        <label for="search"></label>
+                        <label htmlFor="search"></label>
                         <input type="text" name="search" id="search" placeholder="Search"/>
                     </div>
                     {/* <Button/> */}

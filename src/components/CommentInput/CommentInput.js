@@ -11,7 +11,7 @@ function CommentInput () {
                     <div>
                         <form className="comment-input__input">
                             <div className="comment-input__input-container">
-                                <label for="addComment" className="comment-input__subheader">JOIN THE CONVERSATION</label>
+                                <label htmlFor="addComment" className="comment-input__subheader">JOIN THE CONVERSATION</label>
                                 <input type="text" name="addComment" id="addComment" placeholder="Add a new comment"/>
                             </div>
                             <div className="comment-input__button-container">

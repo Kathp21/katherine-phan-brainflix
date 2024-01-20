@@ -1,5 +1,5 @@
 import './Comment.scss';
-import formatTimestamp from '../Utilities/FormatTimestamp';
+import formatTimestamp from '../../utilities/formatTimestamp';
 
 const Comment = ({comment}) => {
     return (

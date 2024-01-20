@@ -4,7 +4,7 @@ function Button() {
     //Do some code
     alert("Hey!");
   };
-  return <button onClick={createAlert} className="header__btn">UPLOAD</button>;
+  return <button onClick={createAlert} className="button">UPLOAD</button>;
 }
 
 export default Button;

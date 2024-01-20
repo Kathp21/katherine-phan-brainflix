@@ -1,0 +1,32 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.video-list {
+    padding: 0 1rem;
+
+    &__container {
+        display: flex;
+    }
+
+    &__thumbnail {
+        max-height: 9vh;
+        // min-height: 12vh;
+        max-width:20vw;
+        min-width: 34vw;  
+        object-fit: cover;
+        background-color: $avatar-placeholder;  
+        margin-bottom: 1rem;
+    }
+
+    &__info {
+        padding-left: 1rem;
+    }
+
+    &__video-title {
+        @include text-demi($body-txt-mob);
+    }
+
+    &__channel {
+        @include text-regular($body-txt-mob);
+    }
+} 
