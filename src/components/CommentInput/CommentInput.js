@@ -1,7 +1,8 @@
 import avatar from '../../assets/images/Mohan-muruge.jpg';
+import Button from '../Button/Button';
 import './CommentInput.scss';
 
-function CommentInput () {
+function CommentInput ({variant}) {
     return (
         <section className="comment-input">
             <p className="comment-input__count">3 Comments</p>
@@ -15,7 +16,7 @@ function CommentInput () {
                                 <input type="text" name="addComment" id="addComment" placeholder="Add a new comment"/>
                             </div>
                             <div className="comment-input__button-container">
-                                <button className="comment-input__button">COMMENT</button>
+                                <Button buttonText="COMMENT" variant="button__comment"/>
                             </div>
                         </form>
                     </div>

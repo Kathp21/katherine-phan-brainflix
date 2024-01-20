@@ -1,10 +1,7 @@
 import "./Button.scss";
-function Button() {
-  const createAlert = () => {
-    //Do some code
-    alert("Hey!");
-  };
-  return <button onClick={createAlert} className="button">UPLOAD</button>;
+
+function Button({buttonText, variant}) {
+  return <button className={`button ${variant}`}>{buttonText}</button>;
 }
 
 export default Button;

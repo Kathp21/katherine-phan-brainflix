@@ -1,14 +1,29 @@
-// @use '../../Styles/partials/variables' as *;
+@use '../../Styles/partials/variables' as *;
 
 
-// button {
-//     margin-top: 1rem;
-//     height: $btn-height;
-//     background-color: $primary-active-form;
-//     border-radius: $border-radius;
-//     border: none;
-//     color: $CTA-txt;
-//     background-image: url('../../assets/images/icons/upload.svg');
-//     background-position: 10px 10px; 
-//     background-repeat: no-repeat;
-// }
+button {
+    margin-top: 1rem;
+    height: $btn-height;
+    background-color: $primary-active-form;
+    border-radius: $border-radius;
+    border: none;
+    color: $CTA-txt;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+}
+
+.button__header {
+    width: 90vw;
+    margin-top: 1rem;
+    background-image: url('../../assets/images/icons/upload.svg');
+}
+
+.button__comment {
+    width: 74vw;
+    margin-top: 0;
+    background-image: url('../../assets/images/icons/add_comment.svg');
+}
+
+
+
+

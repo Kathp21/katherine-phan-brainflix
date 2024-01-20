@@ -41,13 +41,6 @@
         display: flex;
         justify-content: center;
     }
-
-    &__button {
-       width: 74vw;
-       margin-top: 0;
-       @include button-style;
-       background-image: url('../../assets/images/icons/add_comment.svg');
-    }
 }
 
 #addComment {
@@ -55,3 +48,4 @@
     margin-bottom: 1.2rem;
     @include form-style;
 }
+
