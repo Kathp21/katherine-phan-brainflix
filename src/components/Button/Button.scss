@@ -1,5 +1,5 @@
 @use '../../Styles/partials/variables' as *;
-
+@use '../../styles/partials/mixins' as *;
 
 button {
     margin-top: 1rem;
@@ -10,12 +10,49 @@ button {
     color: $CTA-txt;
     background-position: 10px 10px; 
     background-repeat: no-repeat;
+    @include text-demi($btn-txt-mob);
+
+    &:hover {
+        background-color: $hover-state;
+    }
 }
 
 .button__header {
     width: 90vw;
     margin-top: 1rem;
     background-image: url('../../assets/images/icons/upload.svg');
+
+    @include tablet{ 
+        font-size: $btn-label;
+        width: $btn-width;
+        padding: 0 $tab-btn-padding;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    &--mobile {
+        @include tablet {
+            opacity: 0;
+            height: 0;
+            margin: 0;
+            width: 0;
+        }
+    }
+
+    &--tablet {
+        opacity: 0;
+        height: 0;
+        margin: 0;
+        width: 0;
+        padding: 0;
+
+        @include tablet {
+            opacity: 1;
+            width: $btn-width;
+            height: $btn-height;
+        }
+    }
 }
 
 .button__comment {

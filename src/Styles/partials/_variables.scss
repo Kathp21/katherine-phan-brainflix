@@ -20,12 +20,19 @@ $border-radius: 4px;
 $line-divider: 1px solid $line-divider-color;
 $avatar-border-radius: 50%;
 
+//From style for mobile
+$form-height-mob: 2.25rem;
+$form-padding-mob: 0.75rem;
+
+//Form style for desktop & tablet
+$form-height: 2.5rem;
+$form-width: 15rem;
+$form-padding: 1rem;
+
 
 //Styles for mobile 
 $mobi-padding: 1rem;
 $avatar-mob: 2.25rem;
-
-
 
 //Styles for desktop & tablet
 $avatar-tab: 2.5rem;

@@ -6,16 +6,16 @@
 
     &__container {
         display: flex;
+        align-items: center;
     }
 
     &__thumbnail {
-        max-height: 9vh;
+        // max-height: 9vh;
         // min-height: 12vh;
-        max-width:20vw;
-        min-width: 34vw;  
+        max-width:24vw;
+        min-width: 35vw;  
         object-fit: cover;
         background-color: $avatar-placeholder;  
-        margin-bottom: 1rem;
         aspect-ratio: 16 / 9;
         // max-height: 63vh;
         // object-fit: contain;

@@ -2,7 +2,7 @@
 @use '../../Styles/partials/mixins' as *;
 
 #search {
-    width: 75vw;
+    width: 15rem;
     background-image: url('../../assets/images/icons/search.svg');
     background-position: 10px 10px; 
     padding: 12px 20px 12px 40px;
@@ -10,6 +10,10 @@
     background-repeat: no-repeat;
     font-size: 16px;
     @include form-style;
+
+    @include tablet {
+        width: 15rem;
+    }
 }
 
 ::placeholder {
@@ -17,10 +21,19 @@
 }
 
 .header {
+    @include tablet {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+        margin-top: 1rem;
+    }
 
     &__logo {
-    display: flex;
-    justify-content: center;
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+        height: 1.56rem;
     }
 
     &__search-bar {
@@ -32,12 +45,37 @@
         width: 2.25rem;
         height: 2.25rem;
         border-radius: 50%;
-        margin: 1.5rem 0 0 1rem;
+        margin: 1.5rem 0 0 1.2rem;
+
+        &--mobile {
+            opacity: 1;
+           
+            @include tablet {
+                opacity: 0;
+                height: 0;
+                margin: 0;
+            }
+        }
+
+        &--tablet {
+            opacity: 0;
+            height: 0;
+            @include tablet {
+                opacity: 1;
+                height: $avatar-tab;
+            }
+        }
     }
 
     &__container {
         display: flex;
         flex-direction: column;
         padding: 0 1rem;
+
+        @include tablet {
+            flex-direction: row;
+            padding: 0;
+            margin-left: 7.5rem;
+        }
     }
 }
