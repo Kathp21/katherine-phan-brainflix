@@ -16,6 +16,9 @@
         object-fit: cover;
         background-color: $avatar-placeholder;  
         margin-bottom: 1rem;
+        aspect-ratio: 16 / 9;
+        // max-height: 63vh;
+        // object-fit: contain;
     }
 
     &__info {
