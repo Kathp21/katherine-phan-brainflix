@@ -4,13 +4,13 @@ import viewLogo from '../../assets/images/icons/views.svg';
 import likeLogo from '../../assets/images/icons/likes.svg';
 import formatTimestamp from '../../utilities/formatTimestamp';
 
-const CurrentVideo = ({ video }) => {
+const CurrentVideo = ({ currentVideo }) => {
 
-  const {title, channel, image, description, views, likes, timestamp} = video
+  const {title, channel, image, description, views, likes, timestamp} = currentVideo
 
   return (
     <div className="video">
-        <video src={video} controls className="video__source" poster={image}></video>
+        <video src={currentVideo} controls className="video__source" poster={image}></video>
         <section className="video__title-container">
           <h1 className="video__title">{title}</h1>
           <div className="video__details-container">

@@ -12,8 +12,7 @@ function App() {
 
   const [ currentVideo, setCurrentVideo ] = useState(data[0])
 
-  const alterVideo = (videoObject, event) => {
-    event.preventDefault();
+  const alterVideo = (videoObject) => {
     setCurrentVideo(videoObject)
   }
 
@@ -21,8 +20,8 @@ function App() {
     <>
       <Header/>
       <CurrentVideo 
-        key={data[0].id} video={data[0]} 
-        currentVideo={currentVideo}
+       currentVideo={currentVideo}
+        key={data.id} currentDislayVideo={data[1]}
         />
       <CommentInput/>
       {data[0].comments.map((comment) => {

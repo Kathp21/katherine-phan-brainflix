@@ -1,17 +1,22 @@
- import './VideoList.scss';
+import './VideoList.scss';
 
- const VideoList = ({data, currentVideo, alterVideo}) => {
+
+const VideoList = ({data, currentVideo, alterVideo}) => {
     return (
         <ul className="video-list">
             {data.map((video) => {
-                console.log(video)
                 return ( video.title!==currentVideo.title &&
                 <li className="video-list__container"
                     key = {video.title}
-                    onClick={(event) => alterVideo ({
-                        event,
+                    onClick={() => alterVideo ({
                         video: video.video,
-                        title: video.title,    
+                        title: video.title, 
+                        thumbnail: video.image,
+                        views: video.views,
+                        likes:  video.likes,
+                        channel: video.channel,
+                        date: video.timestamp,
+                        comments: video.comments,
                     })}>
                         <img src={video.image} className="video-list__thumbnail"/>
                         <div className="video-list__info">
@@ -23,6 +28,6 @@
             })}
         </ul>
     )
- }
+}
 
- export default VideoList;
+export default VideoList;
