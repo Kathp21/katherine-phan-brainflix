@@ -20,11 +20,12 @@ function App() {
     <>
       <Header/>
       <CurrentVideo 
-       currentVideo={currentVideo}
-        key={data.id} currentDislayVideo={data[1]}
-        />
+        currentVideo={currentVideo}
+        key={data.id} 
+        currentDislayVideo={currentVideo}
+      />
       <CommentInput/>
-      {data[0].comments.map((comment) => {
+      {currentVideo.comments.map((comment) => {
         return <Comment key={comment.id} comment={comment}/>
       })}
       <VideoList
