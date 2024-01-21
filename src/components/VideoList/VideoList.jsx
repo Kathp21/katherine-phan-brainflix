@@ -4,6 +4,7 @@ import './VideoList.scss';
 const VideoList = ({data, currentVideo, alterVideo}) => {
     return (
         <ul className="video-list">
+            <p className="video-list__section-header">NEXT VIDEOS</p>
             {data.map((video) => {
                 return ( video.title!==currentVideo.title &&
                 <li className="video-list__container"

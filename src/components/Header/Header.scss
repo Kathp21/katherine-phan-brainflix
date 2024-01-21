@@ -26,7 +26,7 @@
         justify-content: space-between;
         align-items: center;
         padding: 0 2rem;
-        margin-top: 1rem;
+        // margin-top: 1rem;
     }
 
     @include desktop {
@@ -64,12 +64,12 @@
         &--tablet {
             opacity: 0;
             height: 0;
+        }
 
-            @include tablet {
-                opacity: 1;
-                height: $avatar-tab;
-                width: $avatar-tab;
-            }
+        @include tablet {
+            opacity: 1;
+            height: $avatar-tab;
+            width: $avatar-tab;
         }
     }
 
@@ -79,8 +79,7 @@
         padding: 0 1rem;
 
         @include tablet {
-            // flex-direction: row;
-            padding: 0 2rem;
+            padding: 0;
             margin-left: 4.5rem;
         }
     }
