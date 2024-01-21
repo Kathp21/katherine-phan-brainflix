@@ -2,7 +2,6 @@
 @use '../../styles/partials/mixins' as *;
 
 button {
-    margin-top: 1rem;
     height: $btn-height;
     background-color: $primary-active-form;
     border-radius: $border-radius;
@@ -19,7 +18,6 @@ button {
 
 .button__header {
     width: 90vw;
-    margin-top: 1rem;
     background-image: url('../../assets/images/icons/upload.svg');
 
     @include tablet{ 
