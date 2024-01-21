@@ -24,7 +24,7 @@ function App() {
         key={data.id} 
         currentDislayVideo={currentVideo}
       />
-      <CommentInput/>
+      <CommentInput numberOfComment={currentVideo.comments.length}/>
       {currentVideo.comments.map((comment) => {
         return <Comment key={comment.id} comment={comment}/>
       })}

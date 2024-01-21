@@ -2,10 +2,10 @@ import avatar from '../../assets/images/Mohan-muruge.jpg';
 import Button from '../Button/Button';
 import './CommentInput.scss';
 
-function CommentInput ({variant}) {
+function CommentInput ({variant, numberOfComment}) {
     return (
         <section className="comment-input">
-            <p className="comment-input__count">3 Comments</p>
+            <p className="comment-input__count">{numberOfComment} Comments</p>
             <section className="comment-input__underline">
                 <section className="comment-input__container">
                     <img src={avatar} alt="avatar" className="comment-input__avatar"/>

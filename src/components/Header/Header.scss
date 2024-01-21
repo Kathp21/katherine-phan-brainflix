@@ -64,12 +64,12 @@
         &--tablet {
             opacity: 0;
             height: 0;
-        }
 
-        @include tablet {
-            opacity: 1;
-            height: $avatar-tab;
-            width: $avatar-tab;
+            @include tablet {
+                opacity: 1;
+                height: $avatar-tab;
+                width: $avatar-tab;
+            }
         }
     }
 
