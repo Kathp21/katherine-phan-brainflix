@@ -10,7 +10,7 @@ function CommentInput ({variant}) {
                 <section className="comment-input__container">
                     <img src={avatar} alt="avatar" className="comment-input__avatar"/>
                     <div>
-                        <form className="comment-input__input">
+                        <form className="comment-input__comment-section">
                             <div className="comment-input__input-container">
                                 <label htmlFor="addComment" className="comment-input__subheader">JOIN THE CONVERSATION</label>
                                 <input type="text" name="addComment" id="addComment" placeholder="Add a new comment"/>

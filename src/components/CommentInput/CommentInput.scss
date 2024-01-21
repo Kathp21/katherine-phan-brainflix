@@ -3,11 +3,18 @@
 
 .comment-input {
     padding: 0 1rem;
-   
 
+    @include tablet {
+        padding: $padding-tab;
+    }
+   
     &__count{
         @include text-demi($subheader-mob);
         color: $primary-txt;
+
+        @include tablet {
+            margin-bottom: 0;
+        }
     }
 
     &__underline {
@@ -19,12 +26,27 @@
         height: $avatar-mob;
         border-radius: $avatar-border-radius;
         margin: 1.5rem 1rem 0 0;
+
+        @include tablet {
+            margin-right: 0;
+            width: $avatar-tab;
+            height: $avatar-tab;
+        }
+    }
+
+    &__comment-section {
+        display: flex;
+        align-items: flex-end;
     }
 
     &__container {
         display: flex;
         justify-content: center;
         padding: 1rem 0;
+
+        @include tablet {
+            padding: 1.5rem 0;
+        }
     }
 
     &__input-container {
@@ -36,6 +58,11 @@
         color: $secondary-txt;
         @include text-demi($subheader-mob);
         margin-bottom: 0.5rem;
+
+        @include tablet {
+            margin-left: 1.5rem;
+            font-size: $subheader;
+        }
     }
 
     &__button-container {
@@ -48,5 +75,12 @@
     padding: 1rem 1rem 4rem 1rem;
     margin-bottom: 1.2rem;
     @include form-style;
+
+    @include tablet {
+        padding: $form-padding;
+        height: $form-height;
+        width: 60vw;
+        margin: 0 1.5rem;
+    }
 }
 

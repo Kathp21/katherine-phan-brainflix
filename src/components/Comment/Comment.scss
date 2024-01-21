@@ -4,10 +4,19 @@
 .comment {
     padding: 0 1rem;
 
+    @include tablet {
+        padding: $padding-tab;
+    }
+
     &__container {
         display: flex;
         margin-top: 1rem;
         border-bottom: $line-divider;
+
+        @include tablet {
+            padding: $pad-top-bottom-tab;
+            margin-top: 0;
+        }
     }
 
     &__avatar {
@@ -20,6 +29,13 @@
         flex-grow: 0;
         flex-basis: auto;
         margin-right: 1rem;
+
+        @include tablet {
+            width: $avatar-tab;
+            height: $avatar-tab;
+            margin-right: 1.5rem;
+            margin-left: 5px;
+        }
     }
 
     &__info {
@@ -30,16 +46,29 @@
     &__username {
         @include text-demi($body-txt-mob);
         color: $primary-txt;
+
+        @include tablet {
+            font-size: $body-txt;
+        }
     }
 
     &__date {
         @include text-regular($body-txt-mob);
         color: $secondary-txt;
+
+        @include tablet {
+            font-size: $body-txt;
+        }
     }
 
     &__content {
         @include text-regular($body-txt-mob);
         line-height: $line-h-body-mob;
         color: $primary-txt;
+
+        @include tablet {
+            font-size: $body-txt;
+            line-height: $line-height-body;
+        }
     }
 }

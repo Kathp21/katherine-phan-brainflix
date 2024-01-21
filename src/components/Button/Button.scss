@@ -60,6 +60,10 @@ button {
     width: 74vw;
     margin-top: 0;
     background-image: url('../../assets/images/icons/add_comment.svg');
+
+    @include tablet {
+        width: $btn-width;
+    }
 }
 
 

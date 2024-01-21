@@ -22,7 +22,7 @@ const CurrentVideo = ({ currentVideo }) => {
                 <span className="video__info"> 
                   <img src={viewLogo} alt="Views" /> {views}
                 </span>
-                <span className="video__info">
+                <span className="video__like-number">
                   <img src={likeLogo} alt="like"/> {likes}
                 </span>
               </div>
