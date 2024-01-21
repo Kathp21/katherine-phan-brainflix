@@ -29,6 +29,10 @@
         margin-top: 1rem;
     }
 
+    @include desktop {
+        justify-content: space-around;
+    }
+
     &__logo {
         display: flex;
         justify-content: center;
@@ -42,8 +46,8 @@
     }
 
     &__avatar {
-        width: 2.25rem;
-        height: 2.25rem;
+        width: $avatar-mob;
+        height: $avatar-mob;
         border-radius: 50%;
         margin: 1.5rem 0 0 1.2rem;
 
@@ -60,9 +64,11 @@
         &--tablet {
             opacity: 0;
             height: 0;
+
             @include tablet {
                 opacity: 1;
                 height: $avatar-tab;
+                width: $avatar-tab;
             }
         }
     }
