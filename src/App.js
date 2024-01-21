@@ -6,7 +6,7 @@ import data from './data/video-details.json';
 import CommentInput from './components/CommentInput/CommentInput';
 import Comment from './components/Comment/Comment';
 import VideoList from './components/VideoList/VideoList';
-// import nextVideo from './data/videos.json';
+import CurrentVideoDescription from './components/CurrentVideoDescription/CurrentVideoDescription';
 
 function App() {
 
@@ -24,15 +24,22 @@ function App() {
         key={data.id} 
         currentDislayVideo={currentVideo}
       />
-      <CommentInput numberOfComment={currentVideo.comments.length}/>
-      {currentVideo.comments.map((comment) => {
-        return <Comment key={comment.id} comment={comment}/>
-      })}
-      <VideoList
-        data = {data}
-        currentVideo= {currentVideo}
-        alterVideo ={alterVideo}
-      />
+      <div className="video-data">
+        <div className="video-data__container">
+          <CurrentVideoDescription currentVideoDescription={currentVideo}/>
+          <CommentInput numberOfComment={currentVideo.comments.length}/>
+          {currentVideo.comments.map((comment) => {
+            return <Comment key={comment.id} comment={comment}/>
+          })}
+        </div>
+        <div className="video-data__side-bar">
+          <VideoList
+            data = {data}
+            currentVideo= {currentVideo}
+            alterVideo ={alterVideo}
+          />
+        </div>
+      </div>
     </>
   )
 }

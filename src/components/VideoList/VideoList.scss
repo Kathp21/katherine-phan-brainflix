@@ -35,6 +35,11 @@
             min-width: 19vw;
             margin-bottom: 1.5rem;
         }
+
+        @include desktop {
+            max-width:10vw;
+            min-width: 10vw;
+        }
     }
 
     &__info {
@@ -54,6 +59,10 @@
             width: 11rem;
             margin-top: 5px;
             margin-bottom: 1rem;
+        }
+
+        @include desktop {
+            margin: 0 0 5px 0;
         }
     }
 

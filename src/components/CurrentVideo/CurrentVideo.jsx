@@ -1,17 +1,17 @@
 import React from 'react';
 import './CurrentVideo.scss';
-import viewLogo from '../../assets/images/icons/views.svg';
-import likeLogo from '../../assets/images/icons/likes.svg';
-import formatTimestamp from '../../utilities/formatTimestamp';
+// import viewLogo from '../../assets/images/icons/views.svg';
+// import likeLogo from '../../assets/images/icons/likes.svg';
+// import formatTimestamp from '../../utilities/formatTimestamp';
 
 const CurrentVideo = ({ currentVideo }) => {
 
-  const {title, channel, image, description, views, likes, timestamp} = currentVideo
+  const {image} = currentVideo
 
   return (
     <div className="video">
         <video src={currentVideo} controls className="video__source" poster={image}></video>
-        <section className="video__title-container">
+        {/* <section className="video__title-container">
           <h1 className="video__title">{title}</h1>
           <div className="video__details-container">
               <div className="video__details">
@@ -28,7 +28,7 @@ const CurrentVideo = ({ currentVideo }) => {
               </div>
           </div>
           <p className="video__description">{description}</p>
-        </section>
+        </section> */}
     </div>
   );
 };

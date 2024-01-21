@@ -1,0 +1,85 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.video-description {
+    padding: 0 1rem;
+
+    @include tablet {
+        padding: $padding-tab;
+    }
+
+    &__title {
+        padding: 1.5rem 0 1rem 0;
+        @include text-demi($page-header-mob);
+        color: $primary-txt;
+        margin: 0;
+
+        @include tablet {
+            padding: 2.25rem 0 1.5rem 0;
+            font-size: $page-header;
+        }
+    }
+
+    &__details-container {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 3rem 1rem 0;
+        border-bottom: $line-divider;
+        border-top: $line-divider;
+
+        @include tablet {
+            border-top: none;
+            padding-right: 0;
+        }
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+
+        @include tablet {
+            flex-direction: row;
+        }
+    }
+
+    &__info {
+        padding-top: 1rem;
+        @include text-regular($body-txt-mob);
+        color: $secondary-txt;
+
+        &--active {
+            font-weight: 600;
+            color: $primary-txt;
+        }
+
+        @include tablet {
+            font-size: $body-txt;
+            padding-top: 0;
+            padding-right: 2.5rem;
+        }
+    }
+
+    &__like-number {
+        padding-top: 1rem;
+        @include text-regular($body-txt-mob);
+        color: $secondary-txt;
+
+        @include tablet {
+            font-size: $body-txt;
+            padding-top: 0;
+        }
+    }
+
+    &__description {
+        @include text-regular($body-txt-mob);
+        line-height: $line-h-body-mob;
+        color: $primary-txt;
+        margin: 1rem 0;
+
+        @include tablet {
+            font-size: $body-txt;
+            line-height: $line-height-body;
+            margin: 1.5rem 0;
+        }
+    }
+}
