@@ -4,7 +4,12 @@
 .video {
     &__source {
         width: 100vw;
-        padding-top: $mobi-padding;
+        margin-top: $mobi-padding;
+
+        @include tablet {
+            padding: 0 2rem;
+            background-color: $video-component;
+        }
     }
 
     &__title-container {
@@ -21,7 +26,7 @@
     &__details-container {
         display: flex;
         justify-content: space-between;
-        padding: 1rem 3rem 1rem 0;
+        padding: 0 3rem 1rem 0;
         border-bottom: $line-divider;
         border-top: $line-divider;
     }
@@ -32,12 +37,20 @@
     }
 
     &__info {
-        padding: 0.5rem;
+        padding-top: 1rem;
+        @include text-regular($body-txt-mob);
+        color: $secondary-txt;
+
+        &--active {
+            font-weight: 600;
+            color: $primary-txt;
+        }
     }
 
     &__description {
         @include text-regular($body-txt-mob);
         line-height: $line-h-body-mob;
+        color: $primary-txt;
     }
 }   
 

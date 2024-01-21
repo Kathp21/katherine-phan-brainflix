@@ -27,9 +27,11 @@
 
     &__video-title {
         @include text-demi($body-txt-mob);
+        color: $primary-txt;
     }
 
     &__channel {
         @include text-regular($body-txt-mob);
+        color: $primary-txt;
     }
 } 

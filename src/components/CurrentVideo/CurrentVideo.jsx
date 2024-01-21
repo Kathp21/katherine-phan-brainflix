@@ -15,7 +15,7 @@ const CurrentVideo = ({ currentVideo }) => {
           <h1 className="video__title">{title}</h1>
           <div className="video__details-container">
               <div className="video__details">
-                <span className="video__info">{channel}</span>
+                <span className="video__info video__info--active">By {channel}</span>
                 <span className="video__info">{formatTimestamp(timestamp)}</span>
               </div>
               <div className="video__details">

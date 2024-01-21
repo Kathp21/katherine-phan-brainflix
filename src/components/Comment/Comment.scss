@@ -29,6 +29,7 @@
 
     &__username {
         @include text-demi($body-txt-mob);
+        color: $primary-txt;
     }
 
     &__date {
@@ -39,5 +40,6 @@
     &__content {
         @include text-regular($body-txt-mob);
         line-height: $line-h-body-mob;
+        color: $primary-txt;
     }
 }
