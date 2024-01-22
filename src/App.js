@@ -31,8 +31,8 @@ function App() {
           {currentVideo.comments.map((comment, index) => {
             const isLastComment = index === currentVideo.comments.length - 1;
             return (
-              <div className="comment__divider-container">
-                <Comment key={comment.id} comment={comment}/>
+              <div className="comment__divider-container" key={comment.id}>
+                <Comment comment={comment}/>
                 {!isLastComment && <div className="comment__divider"></div>}
                 {isLastComment && <div className="comment__last-divider"></div>}
               </div>
