@@ -9,7 +9,6 @@ function CommentInput ({variant, numberOfComment}) {
             <section className="comment-input__underline">
                 <section className="comment-input__container">
                     <img src={avatar} alt="avatar" className="comment-input__avatar"/>
-                    <div>
                         <form className="comment-input__comment-section">
                             <div className="comment-input__input-container">
                                 <label htmlFor="addComment" className="comment-input__subheader">JOIN THE CONVERSATION</label>
@@ -19,7 +18,6 @@ function CommentInput ({variant, numberOfComment}) {
                                 <Button buttonText="COMMENT" variant="button__comment"/>
                             </div>
                         </form>
-                    </div>
                 </section>
             </section>
         </section>

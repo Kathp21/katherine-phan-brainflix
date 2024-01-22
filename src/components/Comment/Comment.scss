@@ -96,9 +96,6 @@
         @include tablet {
             font-size: $body-txt;
             line-height: $line-height-body;
-        }
-
-        @include desktop {
             margin-bottom: 0;
         }
     }

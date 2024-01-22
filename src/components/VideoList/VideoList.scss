@@ -16,8 +16,8 @@
         @include text-demi($section-header-mob);
         color: $secondary-txt;
 
-        @include desktop {
-            margin-bottom: 1.5rem;
+        @include tablet {
+            margin: 1.5rem 0;
         }
     }
 

@@ -2,13 +2,12 @@
 @use '../../Styles/partials/mixins' as *;
 
 #search {
-    width: 15rem;
+    flex: 1;
     background-image: url('../../assets/images/icons/search.svg');
     background-position: 10px 10px; 
-    padding: 12px 20px 12px 40px;
-    background-position: 10px 10px; 
+    padding: 0.75rem 1.25rem 0.75rem 2.5rem;
     background-repeat: no-repeat;
-    font-size: 16px;
+    font-size: $body-txt-mob;
     @include form-style;
     margin: 1rem 0;
 
