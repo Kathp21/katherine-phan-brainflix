@@ -11,6 +11,10 @@
     &__section-header {
         @include text-demi($section-header-mob);
         color: $secondary-txt;
+
+        @include desktop {
+            margin-bottom: 1.5rem;
+        }
     }
 
     &__container {

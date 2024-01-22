@@ -8,10 +8,26 @@
         padding: $padding-tab;
     }
 
+    @include desktop {
+        padding-right: 0;
+    }
+
+    &__divider {
+        border-bottom: $line-divider;
+    }
+
+    &__last-divider {
+        border-bottom: $line-divider;
+
+        @include desktop {
+            display: none;
+        }
+    }
+
     &__container {
         display: flex;
         margin-top: 1rem;
-        border-bottom: $line-divider;
+       
 
         @include tablet {
             padding: $pad-top-bottom-tab;
@@ -69,6 +85,13 @@
         @include tablet {
             font-size: $body-txt;
             line-height: $line-height-body;
+        }
+    }
+
+    &__input-container {
+        
+        @include desktop {
+            padding-right: 1.5rem;
         }
     }
 }

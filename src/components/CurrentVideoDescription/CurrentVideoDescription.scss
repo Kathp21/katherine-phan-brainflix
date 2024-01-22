@@ -8,6 +8,10 @@
         padding: $padding-tab;
     }
 
+    @include desktop {
+        padding-right: 0;
+    }
+
     &__title {
         padding: 1.5rem 0 1rem 0;
         @include text-demi($page-header-mob);
@@ -68,6 +72,10 @@
             font-size: $body-txt;
             padding-top: 0;
         }
+
+        @include desktop {
+            padding-right: 1.5rem;
+        }
     }
 
     &__description {
@@ -80,6 +88,10 @@
             font-size: $body-txt;
             line-height: $line-height-body;
             margin: 1.5rem 0;
+        }
+
+        @include desktop {
+            margin-right: 1.5rem;
         }
     }
 }

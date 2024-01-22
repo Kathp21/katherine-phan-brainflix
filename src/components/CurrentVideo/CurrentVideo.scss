@@ -9,6 +9,11 @@
         @include tablet {
             padding: $padding-tab;
             background-color: $video-component;
+            margin-top: 0;
+        }
+
+        @include desktop {
+            padding: 0 15rem;
         }
     }
 }   

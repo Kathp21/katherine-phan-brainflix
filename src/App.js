@@ -28,8 +28,15 @@ function App() {
         <div className="video-data__container">
           <CurrentVideoDescription currentVideoDescription={currentVideo}/>
           <CommentInput numberOfComment={currentVideo.comments.length}/>
-          {currentVideo.comments.map((comment) => {
-            return <Comment key={comment.id} comment={comment}/>
+          {currentVideo.comments.map((comment, index) => {
+            const isLastComment = index === currentVideo.comments.length - 1;
+            return (
+              <div>
+                <Comment key={comment.id} comment={comment}/>
+                {!isLastComment && <div className="comment__divider"></div>}
+                {isLastComment && <div className="comment__last-divider"></div>}
+              </div>
+            )
           })}
         </div>
         <div className="video-data__side-bar">

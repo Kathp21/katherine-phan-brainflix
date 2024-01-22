@@ -7,11 +7,14 @@
     @include tablet {
         padding: $padding-tab;
     }
+
+    @include desktop {
+        padding-right: 0;
+    }
    
     &__count{
         @include text-demi($subheader-mob);
         color: $primary-txt;
-
         @include tablet {
             margin-bottom: 0;
         }
@@ -35,17 +38,15 @@
     }
 
     &__comment-section {
-
         @include tablet {
-        display: flex;
-        align-items: flex-end;
+            display: flex;
+            align-items: flex-end;
         }
     }
 
     &__container {
-        display: flex;
-        justify-content: center;
         padding: 1rem 0;
+        display: flex;
 
         @include tablet {
             padding: 1.5rem 0;
@@ -81,8 +82,8 @@
 
     @include tablet {
         padding: $form-padding;
-        height: $form-height;
-        width: 60vw;
+        height: $form-height;    
+        width: 27rem;    
         margin: 0 1.5rem;
     }
 }
