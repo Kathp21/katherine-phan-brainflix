@@ -2,14 +2,21 @@
 @use '../../Styles/partials/mixins' as *;
 
 .comment {
-    padding: 0 1rem;
-
-    @include tablet {
-        padding: $padding-tab;
-    }
 
     @include desktop {
-        padding-right: 0;
+        padding: 0;
+    }
+
+    &__divider-container {
+        padding: 0 1rem;
+
+        @include tablet {
+            padding: $padding-tab;
+        }
+
+        @include desktop {
+            padding: 0;
+        }
     }
 
     &__divider {
@@ -52,6 +59,10 @@
             margin-right: 1.5rem;
             margin-left: 5px;
         }
+
+        @include desktop {
+            margin-left: 0;
+        }
     }
 
     &__info {
@@ -85,6 +96,10 @@
         @include tablet {
             font-size: $body-txt;
             line-height: $line-height-body;
+        }
+
+        @include desktop {
+            margin-bottom: 0;
         }
     }
 

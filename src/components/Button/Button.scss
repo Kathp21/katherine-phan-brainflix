@@ -55,11 +55,13 @@ button {
 }
 
 .button__comment {
+    font-size: $btn-txt-mob;
     width: 74vw;
     margin-top: 0;
     background-image: url('../../assets/images/icons/add_comment.svg');
 
     @include tablet {
+        font-size: $btn-label;
         width: $btn-width;
     }
 }

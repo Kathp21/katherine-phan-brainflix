@@ -1,6 +1,5 @@
 import './VideoList.scss';
 
-
 const VideoList = ({data, currentVideo, alterVideo}) => {
     return (
         <ul className="video-list">

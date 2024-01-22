@@ -9,12 +9,13 @@
     }
 
     @include desktop {
-        padding-right: 0;
+        padding: 0;
     }
    
     &__count{
         @include text-demi($subheader-mob);
         color: $primary-txt;
+       
         @include tablet {
             margin-bottom: 0;
         }
@@ -38,6 +39,7 @@
     }
 
     &__comment-section {
+        
         @include tablet {
             display: flex;
             align-items: flex-end;
@@ -83,8 +85,12 @@
     @include tablet {
         padding: $form-padding;
         height: $form-height;    
-        width: 27rem;    
+        width: 29.2rem;    
         margin: 0 1.5rem;
+    }
+
+    @include desktop {
+        width: 24rem;
     }
 }
 

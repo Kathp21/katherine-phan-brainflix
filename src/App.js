@@ -24,14 +24,14 @@ function App() {
         key={data.id} 
         currentDislayVideo={currentVideo}
       />
-      <div className="video-data">
+      <main className="video-data">
         <div className="video-data__container">
           <CurrentVideoDescription currentVideoDescription={currentVideo}/>
           <CommentInput numberOfComment={currentVideo.comments.length}/>
           {currentVideo.comments.map((comment, index) => {
             const isLastComment = index === currentVideo.comments.length - 1;
             return (
-              <div>
+              <div className="comment__divider-container">
                 <Comment key={comment.id} comment={comment}/>
                 {!isLastComment && <div className="comment__divider"></div>}
                 {isLastComment && <div className="comment__last-divider"></div>}
@@ -46,7 +46,7 @@ function App() {
             alterVideo ={alterVideo}
           />
         </div>
-      </div>
+      </main>
     </>
   )
 }
