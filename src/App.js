@@ -29,7 +29,7 @@ function App() {
           <CurrentVideoDescription currentVideoDescription={currentVideo}/>
           <CommentInput numberOfComment={currentVideo.comments.length}/>
           {currentVideo.comments.map((comment, index) => {
-            const isLastComment = index === currentVideo.comments.length - 1;
+            const isLastComment = index === currentVideo.comments.length - 1
             return (
               <div className="comment__divider-container" key={comment.id}>
                 <Comment comment={comment}/>

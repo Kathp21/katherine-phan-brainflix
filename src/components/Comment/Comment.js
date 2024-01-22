@@ -1,7 +1,7 @@
 import './Comment.scss';
 import formatTimestamp from '../../utilities/formatTimestamp';
 
-const Comment = ({comment, shouldShowDivider}) => {
+const Comment = ({comment}) => {
     return (
         <section className="comment">
             <div className="comment__container">

@@ -11,16 +11,16 @@ const CurrentVideoDescription = ({currentVideoDescription}) => {
             <h1 className="video-description__title">{title}</h1>
             <div className="video-description__details-container">
                 <div className="video-description__details">
-                <span className="video-description__info video-description__info--active">By {channel}</span>
-                <span className="video-description__info">{formatTimestamp(timestamp)}</span>
+                    <span className="video-description__info video-description__info--active">By {channel}</span>
+                    <span className="video-description__info">{formatTimestamp(timestamp)}</span>
                 </div>
                 <div className="video-description__details">
-                <span className="video-description__info"> 
-                    <img src={viewLogo} alt="Views" /> {views}
-                </span>
-                <span className="video-description__like-number">
-                    <img src={likeLogo} alt="like"/> {likes}
-                </span>
+                    <span className="video-description__info"> 
+                        <img src={viewLogo} alt="Views" /> {views}
+                    </span>
+                    <span className="video-description__like-number">
+                        <img src={likeLogo} alt="like"/> {likes}
+                    </span>
                 </div>
             </div>
             <p className="video-description__description">{description}</p>
