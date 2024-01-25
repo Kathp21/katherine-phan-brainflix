@@ -8,18 +8,30 @@ import data from "../../data/video-details.json";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import { VideoApi } from "../../video-api";
 
 const HomePage = () => {
 
-    const [ currentVideo, setCurrentVideo ] = useState(data[0])
+    const api = new VideoApi("1359f8ac-1e45-4a18-ab86-1326899beee7")
 
-    const alterVideo = (videoObject) => {
-        setCurrentVideo(videoObject)
-    }
+    const [ currentVideo, setCurrentVideo ] = useState(data[0])
+    const [ videoList, setVideoList ] = useState()
+    const [ isLoading, setIsLoading ] = useState(true)
 
     const {videoId} = useParams()
 
+    const fetchVideos = async () => {
+        const videos = await api.getVideos()
+        setVideoList(videos)
+        setIsLoading(false)
+    }
+
     useEffect(() => {
+        fetchVideos()
+    }, [])
+
+    useEffect(() => {
+        console.log(videoId)
         data.forEach((videoData)=> {
             if (videoData.id === videoId) {
                 setCurrentVideo(videoData)
@@ -27,6 +39,10 @@ const HomePage = () => {
         })
 
     }, [videoId])
+
+    if (isLoading) {
+        return (<div>Loading...</div>)
+    }
 
     return (
         <>
@@ -53,9 +69,8 @@ const HomePage = () => {
             </div>
             <div className="video-data__side-bar">
                 <VideoList
-                    data = {data}
+                    data = {videoList}
                     currentVideo= {currentVideo}
-                    alterVideo ={alterVideo}
                 />
             </div>
         </main>
