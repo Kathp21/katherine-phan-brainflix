@@ -4,41 +4,52 @@ import CurrentVideoDescription from "../../components/CurrentVideoDescription/Cu
 import Comment from "../../components/Comment/Comment";
 import CommentInput from "../../components/CommentInput/CommentInput";
 import VideoList from "../../components/VideoList/VideoList";
-import data from "../../data/video-details.json";
+// import data from "../../data/video-details.json";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import axios from "axios";
+// import axios from "axios";
 import { VideoApi } from "../../video-api";
 
 const HomePage = () => {
 
     const api = new VideoApi("1359f8ac-1e45-4a18-ab86-1326899beee7")
 
-    const [ currentVideo, setCurrentVideo ] = useState(data[0])
+    const [ currentVideo, setCurrentVideo ] = useState()
     const [ videoList, setVideoList ] = useState()
     const [ isLoading, setIsLoading ] = useState(true)
 
     const {videoId} = useParams()
 
+    const fetchVideoDetails = async (id) => {
+        const videoDetails = await api.getVideoDetails(id)
+        setCurrentVideo(videoDetails)
+        setIsLoading(false)
+    }
+
+    useEffect(() => {
+        console.log(videoId)
+        fetchVideoDetails(videoId)
+    },[videoId])
+
     const fetchVideos = async () => {
         const videos = await api.getVideos()
+        console.log(videos)
         setVideoList(videos)
-        setIsLoading(false)
     }
 
     useEffect(() => {
         fetchVideos()
     }, [])
 
-    useEffect(() => {
-        console.log(videoId)
-        data.forEach((videoData)=> {
-            if (videoData.id === videoId) {
-                setCurrentVideo(videoData)
-            }
-        })
+    // useEffect(() => {
+    //     console.log(videoId)
+    //     data.forEach((videoData)=> {
+    //         if (videoData.id === videoId) {
+    //             setCurrentVideo(videoData)
+    //         }
+    //     })
 
-    }, [videoId])
+    // }, [videoId])
 
     if (isLoading) {
         return (<div>Loading...</div>)
@@ -49,7 +60,7 @@ const HomePage = () => {
         <Header/>
         <CurrentVideo 
             currentVideo={currentVideo}
-            key={data.id} 
+            key={currentVideo.id} 
             currentDislayVideo={currentVideo}
         />
         <main className="video-data">
