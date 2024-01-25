@@ -17,24 +17,32 @@ const HomePage = () => {
     const [ currentVideo, setCurrentVideo ] = useState()
     const [ videoList, setVideoList ] = useState()
     const [ isLoading, setIsLoading ] = useState(true)
+    const [ startingVideoId, setStartingVideoId ] = useState()
 
     const {videoId} = useParams()
-
+    
     const fetchVideoDetails = async (id) => {
+        if (id == null) {
+            return
+        }
         const videoDetails = await api.getVideoDetails(id)
+        console.log(id)
         setCurrentVideo(videoDetails)
         setIsLoading(false)
     }
 
     useEffect(() => {
-        console.log(videoId)
         fetchVideoDetails(videoId)
     },[videoId])
 
+    useEffect(() => {
+        fetchVideoDetails(startingVideoId)
+    }, [startingVideoId])
+
     const fetchVideos = async () => {
         const videos = await api.getVideos()
-        console.log(videos)
         setVideoList(videos)
+        setStartingVideoId(videos[0].id)
     }
 
     useEffect(() => {
@@ -46,7 +54,7 @@ const HomePage = () => {
     //     data.forEach((videoData)=> {
     //         if (videoData.id === videoId) {
     //             setCurrentVideo(videoData)
-    //         }
+    //         } 
     //     })
 
     // }, [videoId])
