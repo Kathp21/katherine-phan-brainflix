@@ -6,7 +6,8 @@ import CommentInput from "../../components/CommentInput/CommentInput";
 import VideoList from "../../components/VideoList/VideoList";
 import data from "../../data/video-details.json";
 import { useState, useEffect } from "react";
-// import axios from "axios";
+import { useParams } from "react-router-dom";
+import axios from "axios";
 
 const HomePage = () => {
 
@@ -16,22 +17,16 @@ const HomePage = () => {
         setCurrentVideo(videoObject)
     }
 
-    // const baseUrl = "https://project-2-api.herokuapp.com"
-    // const apiKey = `${baseUrl}/videos?api_key=1359f8ac-1e45-4a18-ab86-1326899beee7`
-    
-    // const fetchVideoList = async() => {
-    //    try {
-    //         const videoData = await axios.get(apiKey)
-    //         alterVideo(videoData.data)
-    //         return videoData.data
-    //    } catch(error) {
-    //     console.error(error.message)
-    //    }
-    // }
+    const {videoId} = useParams()
 
-    // useEffect(() => {
-    //     fetchVideoList();
-    // }, [])
+    useEffect(() => {
+        data.forEach((videoData)=> {
+            if (videoData.id === videoId) {
+                setCurrentVideo(videoData)
+            }
+        })
+
+    }, [videoId])
 
     return (
         <>
