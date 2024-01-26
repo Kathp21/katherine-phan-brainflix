@@ -45,36 +45,21 @@
         align-items: center;
         flex-wrap: wrap;
         margin-top: 0;
+
+        @include tablet {
+            gap: 1.5rem;
+        }
     }
 
     &__avatar {
         width: $avatar-mob;
         height: $avatar-mob;
         border-radius: 50%;
+        margin-left: 1rem;
 
-        &--mobile {
-            opacity: 1;
-            margin: 1rem 0 1rem 1.2rem;
-
-            @include tablet {
-                opacity: 0;
-                height: 0;
-                margin: 0;
-            }
-        }
-
-        &--tablet {
-            opacity: 0;
-            height: 0;
-            display: none;
-
-            @include tablet {
-                display:inline;
-                opacity: 1;
-                height: $avatar-tab;
-                width: $avatar-tab;
-                margin: 0 0 0 1rem;
-            }
+        @include tablet {
+            order: 1;
+            margin: 0;
         }
     }
 

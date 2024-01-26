@@ -15,10 +15,8 @@ function Header() {
                 <form className="header__search-bar">
                     <label htmlFor="search"></label>
                     <input type="text" name="search" id="search" placeholder="Search"/>
-                    <img src={avatar} className='header__avatar header__avatar--mobile' alt="avatar" />
-                    <Link to ="/upload"><Button buttonText="UPLOAD" variant="button__header button__header--tablet"/></Link>
-                    <img src={avatar} className='header__avatar header__avatar--tablet' alt="avatar" />
-                    <Link to ="/upload"><Button buttonText="UPLOAD" variant="button__header button__header--mobile"/></Link>
+                    <img src={avatar} className='header__avatar' alt="avatar" />
+                    <Link to ="/upload"><Button buttonText="UPLOAD" variant="button__header"/></Link>
                 </form>
             </div>
         </header>
