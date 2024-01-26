@@ -3,10 +3,23 @@
 
 .upload-video {
     padding: $mobi-padding;
+    border-top: $line-divider;
+    margin-top: 1rem;
+
+    @include tablet {
+        margin-top: 0;
+        padding: $padding-tab;
+    }
 
     &__page-header {
         @include text-demi($page-header-mob);
         color: $primary-txt;
+
+        @include tablet {
+            border-bottom: $line-divider;
+            padding: $pad-top-bottom-tab;
+            margin: 0;
+        }
     }
 
     &__subheader {
@@ -18,6 +31,10 @@
         width: 100%;
         border-radius: $border-radius;
         background-color: $video-background;
+
+        @include tablet {
+            width: 50%;
+        }
     }
 
     &__container {
@@ -25,10 +42,27 @@
         flex-direction: column;
     }
 
-    &__input-container {
+    &__form-section {
+        @include tablet {
+            border-bottom: $line-divider;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &__title-container {
         display: flex;
         flex-direction: column;
         padding-top: 1rem;
+    }
+
+    &__description-container {
+        display: flex;
+        flex-direction: column;
+        padding-top: 1rem;
+
+        @include tablet {
+            margin-bottom: 1.5rem;
+        }
     }
 
     &__form-title {
@@ -37,12 +71,29 @@
         padding-bottom: 5px;
     }
 
+    &__publish-btn {
+        display: flex;
+        flex-direction: column;  
+
+        @include tablet {
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: baseline;
+            gap: 5rem;
+
+        }
+    }
+
     &__cancel {
         @include text-demi($body-txt-mob);
         color: $primary-active-color;
         text-align: center;
 
+        @include tablet {
+            order: -1;
+        }
     }
+
 }
 
 #videoTitle {

@@ -71,6 +71,12 @@ button {
     margin-top: 0;
     background-image: url('../../assets/images/icons/upload.svg');
     margin-top: 1rem;
+
+    @include tablet {
+        width: $btn-width;
+        height: $btn-height;
+        margin-top: 0;
+    }
 }
 
 a {
