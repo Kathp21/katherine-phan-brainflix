@@ -46,23 +46,23 @@
 
     &__video-thumbnail {
         display: flex;
-
-        @include desktop {
-            flex-direction: column;
-        }
+        flex-direction: column;
     }
 
     &__main-section {
         border-bottom: $line-divider;
         border-top: $line-divider;
+        display: flex;
+        flex-direction: column;
 
         @include tablet {
-            display: flex;
+            flex-direction: column;
             padding: $pad-top-bottom-tab;
         }
 
         @include desktop {
             gap: 1.5rem;
+            flex-direction: row;
         }
     }
 

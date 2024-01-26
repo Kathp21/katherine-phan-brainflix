@@ -1,8 +1,16 @@
 import videoThumbnail from '../../assets/images/Upload-video-preview.jpg';
 import Button from '../Button/Button';
 import './UploadVideo.scss';
+import { Link } from 'react-router-dom';
 
 export default function UploadVideo() {
+
+    const handleClick = (event) => {
+        
+        alert("Video upload successfully")
+        event.preventDefault()
+    }
+
     return (
         <section className='upload-video'>
             <h1 className='upload-video__page-header'>Upload Video</h1>
@@ -25,7 +33,7 @@ export default function UploadVideo() {
                 </div>
             </section>
             <div className='upload-video__publish-btn'>
-                <Button buttonText="PUBLISH" variant="button__upload-video"/>
+                <Link to="/" onClick = {(event) => {handleClick()}}><Button buttonText="PUBLISH" variant="button__upload-video"/></Link>
                 <h3 className='upload-video__cancel'>CANCEL</h3>
             </div>
         </section>
