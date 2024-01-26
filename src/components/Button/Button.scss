@@ -3,7 +3,7 @@
 
 button {
     height: $btn-height;
-    background-color: $primary-active-form;
+    background-color: $primary-active-color;
     border-radius: $border-radius;
     border: none;
     color: $CTA-txt;
@@ -66,6 +66,15 @@ button {
     }
 }
 
+.button__upload-video {
+    font-size: $btn-txt-mob;
+    margin-top: 0;
+    background-image: url('../../assets/images/icons/upload.svg');
+    margin-top: 1rem;
+}
 
+a {
+    text-decoration: none;
+}
 
 

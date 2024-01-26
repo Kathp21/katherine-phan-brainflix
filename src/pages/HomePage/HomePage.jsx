@@ -4,10 +4,8 @@ import CurrentVideoDescription from "../../components/CurrentVideoDescription/Cu
 import Comment from "../../components/Comment/Comment";
 import CommentInput from "../../components/CommentInput/CommentInput";
 import VideoList from "../../components/VideoList/VideoList";
-// import data from "../../data/video-details.json";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-// import axios from "axios";
 import { VideoApi } from "../../video-api";
 
 const HomePage = () => {

@@ -43,6 +43,7 @@
     &__search-bar {
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
         margin-top: 0;
     }
 
@@ -65,8 +66,10 @@
         &--tablet {
             opacity: 0;
             height: 0;
+            display: none;
 
             @include tablet {
+                display:inline;
                 opacity: 1;
                 height: $avatar-tab;
                 width: $avatar-tab;

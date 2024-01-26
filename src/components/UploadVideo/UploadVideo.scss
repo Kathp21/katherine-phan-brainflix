@@ -1,0 +1,58 @@
+@use '../../Styles/partials/variables' as *;
+@use '../../Styles/partials/mixins' as *;
+
+.upload-video {
+    padding: $mobi-padding;
+
+    &__page-header {
+        @include text-demi($page-header-mob);
+        color: $primary-txt;
+    }
+
+    &__subheader {
+        @include text-demi($subheader-mob);
+        color: $secondary-txt;
+    }
+
+    &__thumbnail {
+        width: 100%;
+        border-radius: $border-radius;
+        background-color: $video-background;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__input-container {
+        display: flex;
+        flex-direction: column;
+        padding-top: 1rem;
+    }
+
+    &__form-title {
+        @include text-demi($subheader-mob);
+        color: $secondary-txt;
+        padding-bottom: 5px;
+    }
+
+    &__cancel {
+        @include text-demi($body-txt-mob);
+        color: $primary-active-color;
+        text-align: center;
+
+    }
+}
+
+#videoTitle {
+    @include form-style;
+    height: $form-height-mob;
+    padding: $form-padding-mob;
+}
+
+#videoDescription {
+    @include form-style;
+    height: $form-height-mob;
+    padding: 1rem 0.75rem 3rem 0.75rem;
+}

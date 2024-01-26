@@ -9,14 +9,9 @@ import VideoList from './components/VideoList/VideoList';
 import CurrentVideoDescription from './components/CurrentVideoDescription/CurrentVideoDescription';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage/HomePage';
+import UploadPage from './pages/UploadPage/UploadPage';
 
 function App() {
-
-  const [ currentVideo, setCurrentVideo ] = useState(data[0])
-
-  const alterVideo = (videoObject) => {
-    setCurrentVideo(videoObject)
-  }
 
   return (
     <>
@@ -24,6 +19,7 @@ function App() {
         <Routes>
           <Route path ="/" element = {<HomePage/>}/>
           <Route path ="/video/:videoId" element={<HomePage />}/>
+          <Route path = "/upload" element = {<UploadPage/>}/>
         </Routes>
       </BrowserRouter>
     </>

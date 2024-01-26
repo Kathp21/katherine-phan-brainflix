@@ -42,7 +42,7 @@
 
   @mixin button-style {
     height: $btn-height;
-    background-color: $primary-active-form;
+    background-color: $primary-active-color;
     border-radius: $border-radius;
     border: none;
     color: $CTA-txt;
