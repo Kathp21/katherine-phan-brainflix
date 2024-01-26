@@ -11,12 +11,15 @@
         padding: $padding-tab;
     }
 
+    @include desktop{
+        padding: 0 11.5rem;
+    }
+
     &__page-header {
         @include text-demi($page-header-mob);
         color: $primary-txt;
 
         @include tablet {
-            border-bottom: $line-divider;
             padding: $pad-top-bottom-tab;
             margin: 0;
         }
@@ -35,19 +38,48 @@
         @include tablet {
             width: 50%;
         }
+
+        @include desktop {
+            width: 30vw;
+        }
+    }
+
+    &__video-thumbnail {
+        display: flex;
+
+        @include desktop {
+            flex-direction: column;
+        }
+    }
+
+    &__main-section {
+        border-bottom: $line-divider;
+        border-top: $line-divider;
+
+        @include tablet {
+            display: flex;
+            padding: $pad-top-bottom-tab;
+        }
+
+        @include desktop {
+            gap: 1.5rem;
+        }
     }
 
     &__container {
         display: flex;
         flex-direction: column;
-    }
 
-    &__form-section {
-        @include tablet {
-            border-bottom: $line-divider;
-            margin-bottom: 1.5rem;
+        @include desktop {
+            flex-grow: 1;
         }
     }
+
+    // &__form-section {
+    //     @include tablet {
+    //         margin-bottom: 1.5rem;
+    //     }
+    // }
 
     &__title-container {
         display: flex;
@@ -80,7 +112,7 @@
             justify-content: flex-end;
             align-items: baseline;
             gap: 5rem;
-
+            margin-top: 1.5rem;
         }
     }
 
