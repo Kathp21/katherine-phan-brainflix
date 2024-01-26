@@ -5,8 +5,7 @@ import { Link } from 'react-router-dom';
 
 export default function UploadVideo() {
 
-    const handleClick = (event) => {
-        
+    const handleClick = (event) => { 
         alert("Video upload successfully")
         event.preventDefault()
     }
