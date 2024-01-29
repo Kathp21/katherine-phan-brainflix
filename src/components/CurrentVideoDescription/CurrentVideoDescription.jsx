@@ -16,10 +16,10 @@ const CurrentVideoDescription = ({currentVideoDescription}) => {
                 </div>
                 <div className="video-description__details">
                     <span className="video-description__info"> 
-                        <img src={viewLogo} alt="Views" /> {views}
+                        <img src={viewLogo} alt="Views" className="video-description__icon"/> {views}
                     </span>
-                    <span className="video-description__like-number">
-                        <img src={likeLogo} alt="like"/> {likes}
+                    <span className="video-description__info">
+                        <img src={likeLogo} alt="like" className="video-description__icon"/> {likes}
                     </span>
                 </div>
             </div>

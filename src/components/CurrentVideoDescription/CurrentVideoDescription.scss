@@ -35,6 +35,10 @@
             border-top: none;
             padding-right: 0;
         }
+
+        @include desktop {
+            padding-right: 1.5rem;
+        }
     }
 
     &__details {
@@ -43,6 +47,7 @@
 
         @include tablet {
             flex-direction: row;
+            gap: 2.2rem;
         }
     }
 
@@ -50,6 +55,8 @@
         padding-top: 1rem;
         @include text-regular($body-txt-mob);
         color: $secondary-txt;
+        display: flex;
+        align-items: center;
 
         &--active {
             font-weight: 600;
@@ -59,22 +66,12 @@
         @include tablet {
             font-size: $body-txt;
             padding-top: 0;
-            padding-right: 2.5rem;
         }
     }
 
-    &__like-number {
-        padding-top: 1rem;
-        @include text-regular($body-txt-mob);
-        color: $secondary-txt;
-
+    &__icon {
         @include tablet {
-            font-size: $body-txt;
-            padding-top: 0;
-        }
-
-        @include desktop {
-            padding-right: 1.5rem;
+            padding-right: 10px;
         }
     }
 

@@ -6,7 +6,7 @@ import CommentInput from "../../components/CommentInput/CommentInput";
 import VideoList from "../../components/VideoList/VideoList";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { VideoApi } from "../../video-api";
+import { VideoApi } from "../../api/video-api";
 
 const HomePage = () => {
 
@@ -47,20 +47,10 @@ const HomePage = () => {
         fetchVideos()
     }, [])
 
-    // useEffect(() => {
-    //     console.log(videoId)
-    //     data.forEach((videoData)=> {
-    //         if (videoData.id === videoId) {
-    //             setCurrentVideo(videoData)
-    //         } 
-    //     })
-
-    // }, [videoId])
-
     if (isLoading) {
-        return (<div>Loading...</div>)
+        return (<Header/>)
     }
-
+    
     return (
         <>
         <Header/>
@@ -76,13 +66,13 @@ const HomePage = () => {
                 {currentVideo.comments.map((comment, index) => {
                     const isLastComment = index === currentVideo.comments.length - 1
                     return (
-                <div className="comment__divider-container" key={comment.id}>
-                    <Comment comment={comment}/>
-                    {!isLastComment && <div className="comment__divider"></div>}
-                    {isLastComment && <div className="comment__last-divider"></div>}
-                </div>
+                    <div className="comment__divider-container" key={comment.id}>
+                        <Comment comment={comment}/>
+                        {!isLastComment && <div className="comment__divider"></div>}
+                        {isLastComment && <div className="comment__last-divider"></div>}
+                    </div>
                 )
-            })}
+                })}
             </div>
             <div className="video-data__side-bar">
                 <VideoList

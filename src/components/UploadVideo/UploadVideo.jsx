@@ -5,9 +5,8 @@ import { Link } from 'react-router-dom';
 
 export default function UploadVideo() {
 
-    const handleClick = (event) => { 
+    const handleClick = () => { 
         alert("Video upload successfully")
-        event.preventDefault()
     }
 
     return (
@@ -31,8 +30,8 @@ export default function UploadVideo() {
                     </form>
                 </div>
             </section>
-            <div className='upload-video__publish-btn'>
-                <Link to="/" onClick = {(event) => {handleClick()}}><Button buttonText="PUBLISH" variant="button__upload-video"/></Link>
+            <div className='upload-video__btn-container'>
+                <Link to="/" onClick = {() => {handleClick()}}><Button buttonText="PUBLISH" variant="button__upload-video"/></Link>
                 <h3 className='upload-video__cancel'>CANCEL</h3>
             </div>
         </section>

@@ -5,6 +5,7 @@
     padding: $mobi-padding;
     border-top: $line-divider;
     margin-top: 1rem;
+    padding: 1.5rem 1rem 1rem 1rem;
 
     @include tablet {
         margin-top: 0;
@@ -18,16 +19,26 @@
     &__page-header {
         @include text-demi($page-header-mob);
         color: $primary-txt;
+        margin: 0;
+        padding-bottom: 1rem;
 
         @include tablet {
             padding: $pad-top-bottom-tab;
-            margin: 0;
+            font-size: $page-header;
+        }
+
+        @include desktop {
+            padding: 2rem 0;
         }
     }
 
     &__subheader {
         @include text-demi($subheader-mob);
         color: $secondary-txt;
+
+        @include tablet {
+            font-size: $subheader;
+        }
     }
 
     &__thumbnail {
@@ -40,7 +51,7 @@
         }
 
         @include desktop {
-            width: 30vw;
+            width: 21rem;
         }
     }
 
@@ -50,12 +61,12 @@
     }
 
     &__main-section {
-        border-bottom: $line-divider;
-        border-top: $line-divider;
         display: flex;
         flex-direction: column;
 
         @include tablet {
+            border-bottom: $line-divider;
+            border-top: $line-divider;
             flex-direction: column;
             padding: $pad-top-bottom-tab;
         }
@@ -63,6 +74,7 @@
         @include desktop {
             gap: 1.5rem;
             flex-direction: row;
+            padding: 1rem 0 1.5rem 0;
         }
     }
 
@@ -74,12 +86,6 @@
             flex-grow: 1;
         }
     }
-
-    // &__form-section {
-    //     @include tablet {
-    //         margin-bottom: 1.5rem;
-    //     }
-    // }
 
     &__title-container {
         display: flex;
@@ -93,7 +99,12 @@
         padding-top: 1rem;
 
         @include tablet {
-            margin-bottom: 1.5rem;
+            margin-bottom: 0.5rem;
+            padding-top: 1.5rem;
+        }
+
+        @include desktop {
+            padding-top: 1.5rem;
         }
     }
 
@@ -101,9 +112,13 @@
         @include text-demi($subheader-mob);
         color: $secondary-txt;
         padding-bottom: 5px;
+
+        @include tablet {
+            font-size: $subheader;
+        }
     }
 
-    &__publish-btn {
+    &__btn-container {
         display: flex;
         flex-direction: column;  
 
@@ -112,7 +127,10 @@
             justify-content: flex-end;
             align-items: baseline;
             gap: 5rem;
-            margin-top: 1.5rem;
+        }
+
+        @include desktop {
+            margin-top: 5px;
         }
     }
 
@@ -120,8 +138,10 @@
         @include text-demi($body-txt-mob);
         color: $primary-active-color;
         text-align: center;
+        margin-top: 2rem;
 
         @include tablet {
+            font-size: $body-txt;
             order: -1;
         }
     }
@@ -132,10 +152,21 @@
     @include form-style;
     height: $form-height-mob;
     padding: $form-padding-mob;
+    @include text-regular ($body-txt-mob);
+
+    @include tablet {
+        height: $form-height;
+        padding: $form-padding;
+        font-size: $body-txt;
+    }
 }
 
 #videoDescription {
     @include form-style;
-    height: $form-height-mob;
-    padding: 1rem 0.75rem 3rem 0.75rem;
+    padding: 0.75rem 0.75rem 4rem 0.75rem;
+    @include text-regular ($body-txt-mob);
+
+    @include tablet {
+        font-size: $body-txt;
+    }
 }

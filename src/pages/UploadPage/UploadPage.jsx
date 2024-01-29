@@ -3,9 +3,6 @@ import UploadVideo from "../../components/UploadVideo/UploadVideo";
 
 
 export default function UploadPage () {
-
-
-
     return (
         <>
             <Header/>
