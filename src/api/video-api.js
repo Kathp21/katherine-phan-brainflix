@@ -23,9 +23,9 @@ export class VideoApi {
         }
     }
 
-    postVideo = async () => {
+    postVideo = async (videoData) => {
         try {
-            const newVideo = await axios.post(`${this.baseUrl}/videos`)
+            const newVideo = await axios.post(`${this.baseUrl}/videos`, videoData)
             return newVideo.data
         }catch(error) {
             console.error(error)

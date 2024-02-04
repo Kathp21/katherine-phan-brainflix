@@ -24,7 +24,6 @@ const HomePage = () => {
             return
         }
         const videoDetails = await api.getVideoDetails(id)
-        console.log(id)
         setCurrentVideo(videoDetails)
         setIsLoading(false)
     }
