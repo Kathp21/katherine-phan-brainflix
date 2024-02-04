@@ -10,7 +10,7 @@ import { VideoApi } from "../../api/video-api";
 
 const HomePage = () => {
 
-    const api = new VideoApi("1359f8ac-1e45-4a18-ab86-1326899beee7")
+    const api = new VideoApi()
 
     const [ currentVideo, setCurrentVideo ] = useState()
     const [ videoList, setVideoList ] = useState()
