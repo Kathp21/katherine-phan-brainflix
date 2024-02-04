@@ -57,6 +57,7 @@
         color: $secondary-txt;
         display: flex;
         align-items: center;
+        gap: 0.5rem;
 
         &--active {
             font-weight: 600;
