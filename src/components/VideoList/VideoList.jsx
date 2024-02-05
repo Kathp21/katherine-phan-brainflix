@@ -6,7 +6,7 @@ const VideoList = ({data, currentVideo}) => {
         <ul className="video-list">
             <p className="video-list__section-header">NEXT VIDEOS</p>
             {data.map((video) => {
-                return ( video.title!==currentVideo.title &&
+                return ( video.id!==currentVideo.id &&
                     <Link to={`/video/${video.id}`} key={video.id} style={{textDecoration: 'none'}}>
                         <li className="video-list__container">
                             <img src={video.image} className="video-list__thumbnail" alt="thumbnail"/>
