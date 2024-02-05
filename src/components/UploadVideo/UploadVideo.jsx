@@ -4,11 +4,10 @@ import './UploadVideo.scss';
 import { useNavigate } from 'react-router-dom';
 import { useRef, useState } from "react";
 import { VideoApi } from "../../api/video-api";
-import axios from 'axios';
 
 export default function UploadVideo() {
 
-    const formRef = useRef();
+    const formRef = useRef()
     const [videos, setVideos] = useState([])
     const navigate = useNavigate()
 
@@ -20,7 +19,6 @@ export default function UploadVideo() {
                 title: formRef.current.videoTitle.value,
                 description: formRef.current.videoDescription.value,
             }
-
         event.target.reset()
         try {
             let newVideo = await api.postVideo(newVideoData)
